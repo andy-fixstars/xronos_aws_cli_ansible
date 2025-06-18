@@ -22,3 +22,6 @@ Host that will run AWS CLI
 ### Variables
 
 - `aws_cli_version`: version number of the AWS CLI to install. Leave empty for the lastest.
+- `aws_region`: AWS region to configure the CLI with. Leave empty to not configure.
+- `aws_access_key`: AWS Access Key to configure the CLI with. Leave empty to not configure.
+- `aws_secret`: AWS Secret Key to configure the CLI with. Leave empty to not configure.

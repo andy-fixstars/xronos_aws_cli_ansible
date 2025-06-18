@@ -4,3 +4,8 @@
 
 # semver to install
 aws_cli_version: ""
+
+# aws configuration and credentials
+aws_access_key: ""
+aws_secret_key: ""
+aws_region: ""

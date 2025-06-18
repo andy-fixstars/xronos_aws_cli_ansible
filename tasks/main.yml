@@ -58,3 +58,15 @@
     pkg:
       - python3-packaging
       - python3-boto3
+
+# Configure AWS CLI general configurations
+- name: configure AWS CLI
+  when: aws_region != ""
+  ansible.builtin.include_tasks: configure.yml
+
+# Configure AWS CLI credentials
+- name: configure AWS CLI credentials
+  when:
+  - aws_access_key != "" 
+  - aws_secret_key != ""
+  ansible.builtin.include_tasks: credentials.yml

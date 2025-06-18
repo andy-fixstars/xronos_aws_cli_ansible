@@ -1,0 +1,14 @@
+---
+- name: Create directory .aws/
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/.aws"
+    state: directory
+
+- name: Append AWS config
+  ansible.builtin.blockinfile:
+    path: "{{ ansible_env.HOME }}/.aws/config"
+    block: |
+      [default]
+      region = {{ aws_region }}
+      output = text
+    create: yes
