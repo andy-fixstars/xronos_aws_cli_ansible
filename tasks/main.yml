@@ -49,7 +49,7 @@
       register: _aws_version_check
       failed_when: ('aws-cli/' ~ aws_cli_version) not in _aws_version_check.stdout
       changed_when: false
-      ansible.builtin.command: aws --version
+      ansible.builtin.command: /usr/local/bin/aws --version
 
 # allows checking AWS SDK versions
 - name: apt install python packages
